@@ -1,0 +1,51 @@
+{
+  "plugins": ["commitlint-plugin-jira-rules"],
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "type-enum": [
+      2,
+      "always",
+      [
+        "build",
+        "chore",
+        "ci",
+        "docs",
+        "feat",
+        "fix",
+        "perf",
+        "refactor",
+        "revert",
+        "style",
+        "test",
+        "init",
+        "ui",
+        "release",
+        "deploy",
+        "add",
+        "minus",
+        "del"
+      ]
+    ],
+    "scope-case": [2, "always", ["lower-case"]],
+    "scope-enum": [
+      2,
+      "always",
+      [
+        "app",
+        "package",
+        "settings",
+        "controller",
+        "service",
+        "module",
+        "components",
+        "utils",
+        "styles",
+        "deps",
+        "other"
+      ]
+    ],
+    "subject-empty": [2, "never"],
+    "subject-case": [2, "always", ["lower-case"]],
+    "header-max-length": [2, "always", 100]
+  }
+}
