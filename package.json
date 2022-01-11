@@ -24,7 +24,8 @@
     "prettier:format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prettier:watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -55,7 +56,19 @@
     "eslint-plugin-jest": "^25.3.4",
     "eslint-plugin-no-loops": "^0.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.7",
     "onchange": "^7.1.0",
     "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.{js,json,yml,md}": [
+      "pnpm prettier --write"
+    ],
+    "**/*.{js,jsx,ts,tsx}": [
+      "pnpm lint",
+      "pnpm prettier --write",
+      "pnpm test --watchAll=false --findRelatedTests --bail"
+    ]
   }
 }
