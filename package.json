@@ -1,6 +1,12 @@
 {
-  "name": "loann-website",
+  "name": "react-template-typescript",
   "version": "0.1.0",
+  "description": "react typescript template with husky commitizen commitlint docker lint-staged",
+  "author": "Maxime Cordeiro <maxime.cordeiro@gmail.com>",
+  "maintainers": [
+    "Maxime Cordeiro <maxime.cordeiro@gmail.com>"
+  ],
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -20,7 +26,7 @@
     "start": "react-scripts start",
     "start:prod": "serve -s build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cucumber-js",
     "eject": "react-scripts eject",
     "prettier:format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prettier:watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
@@ -53,10 +59,13 @@
   "devDependencies": {
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
+    "@cucumber/cucumber": "^8.0.0-rc.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "commitizen": "^4.2.4",
     "commitlint-config-cz": "^0.13.3",
+    "cucumber": "^7.0.0-rc.0",
+    "cucumber-tsflow": "^4.0.0-preview.7",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.3.0",
     "eslint": "^8.6.0",
@@ -76,7 +85,7 @@
     "*.{js,json,yml,md}": [
       "pnpm prettier --write"
     ],
-    "**/*.{js,jsx,ts,tsx}": [
+    "**/*.{ts,tsx}": [
       "pnpm lint",
       "pnpm prettier --write"
     ]

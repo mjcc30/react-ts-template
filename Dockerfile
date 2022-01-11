@@ -18,8 +18,7 @@ WORKDIR ${APP_ROOT}
 COPY package.json pnpm-lock.yaml ${APP_ROOT}
 ## ajout .git pour husky install git hooks
 ADD .git/ ${APP_ROOT}/.git/
-RUN ls -a
-RUN pnpm i
+RUN pnpm i --prod
 ADD . ${APP_ROOT}
 VOLUME ${APP_ROOT}
 EXPOSE ${PORT}
