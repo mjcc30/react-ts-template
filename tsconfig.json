@@ -16,14 +16,30 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
-  "exclude": ["node_modules"],
-  "baseUrl": "./src",
   "paths": {
-    "@components/*": ["./components"],
-    "@containers/*": ["./containers"],
-    "@contexts/*": ["./contexts"],
-    "@pages/*": ["./pages"],
-    "@tests/*": ["./tests"]
-  }
+    "@root/*": ["./*"],
+    "@src/*": ["./src/*"],
+    "@assets/*": ["./src/assets/*"],
+    "@svg/*": ["./src/assets/svg/*"],
+    "@components/*": ["./src/components/*"],
+    "@atom/*": ["./src/components/atom/*"],
+    "@molecule/*": ["./src/components/molecule/*"],
+    "@organism/*": ["./src/components/organism/*"],
+    "@authentification/*": ["./src/authentification/*"],
+    "@hooks/*": ["./src/hooks/*"],
+    "@middleware/*": ["./src/middleware/*"],
+    "@routes/*": ["./src/middleware/routes/*"],
+    "@pages/*": ["./src/pages/*"],
+    "@utils/*": ["./src/utils/*"],
+    "@styles/*": ["./styles"],
+    "@lib/*": ["./src/lib/*"],
+    "@data/*": ["./src/data/*"],
+    "@context/*": ["./src/context/*"],
+    "@validation/*": ["./src/validation/*"],
+    "@services/*": ["./src/services/*"],
+    "@cypress/*": ["cypress/*"],
+    "@features/*": ["features/*"],
+    "@public/*": ["public/*"]
+  },
+  "exclude": ["/node_modules/*", "/build/*"]
 }

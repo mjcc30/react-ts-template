@@ -1,11 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "no-loops",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "no-loops", "prettier"],
   "extends": [
     "eslint:recommended",
     "airbnb",
@@ -13,7 +9,8 @@
     "airbnb/hooks",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
   ],
   "rules": {
     "no-console": 1,

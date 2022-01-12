@@ -7,7 +7,7 @@ services:
     restart: always
     hostname: gateway
     env_file:
-      - .env
+      - ../.env
     ports:
       - ${PORT}:${PORT}
     networks:

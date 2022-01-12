@@ -15,9 +15,9 @@ RUN mkdir -p ${APP_ROOT}
 WORKDIR ${APP_ROOT}
 # Instalation des dépendences
 ## ajout de package.json yarn.lock
-COPY package.json pnpm-lock.yaml ${APP_ROOT}
+COPY ../package.json ../pnpm-lock.yaml ${APP_ROOT}
 ## ajout .git pour husky install git hooks
-ADD .git/ ${APP_ROOT}/.git/
+ADD ../.git/ ${APP_ROOT}/.git/
 RUN pnpm i --prod
 ADD . ${APP_ROOT}
 VOLUME ${APP_ROOT}

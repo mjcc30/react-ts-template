@@ -1,1 +1,4 @@
 **/*.js
+/.storybook
+*/stories/*
+**/*.stories.*
